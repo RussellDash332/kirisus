@@ -2,9 +2,9 @@ name: remind
 on:
   workflow_dispatch:
   schedule:
-    - cron: "55 1 * * *" # 10AM SGT - 5min
+    - cron: "55 1/6 * * *"
 jobs:
-  waffle:
+  remind:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
