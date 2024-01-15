@@ -1,0 +1,25 @@
+name: bot
+on:
+  schedule:
+    - cron: '* */6 * * *'
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: Requirements
+        run: pip install -r requirements.txt
+      - name: Run bot
+        run: python main.py
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          SL_CHAT: ${{ secrets.SL_CHAT }}
+          PCT_CHAT: ${{ secrets.PCT_CHAT }}
+          CLUSTER_CHAT: ${{ secrets.CLUSTER_CHAT }}
+          PINNED: ${{ secrets.PINNED }}
+          RUSSELL: ${{ secrets.RUSSELL }}
