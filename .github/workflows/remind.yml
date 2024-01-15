@@ -1,8 +1,6 @@
 name: remind
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "55 1/6 * * *"
 jobs:
   remind:
     runs-on: ubuntu-latest
