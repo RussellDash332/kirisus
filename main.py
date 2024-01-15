@@ -2,9 +2,9 @@ try:
     from env import SL_CHAT, PCT_CHAT, CLUSTER_CHAT, TOKEN, PINNED, RUSSELL
 except:
     from os import environ
-    SL_CHAT = environ['SL_CHAT']
-    PCT_CHAT = environ['PCT_CHAT']
-    CLUSTER_CHAT = environ['CLUSTER_CHAT']
+    SL_CHAT = int(environ['SL_CHAT'])
+    PCT_CHAT = int(environ['PCT_CHAT'])
+    CLUSTER_CHAT = int(environ['CLUSTER_CHAT'])
     TOKEN = environ['TOKEN']
     PINNED = environ['PINNED']
     RUSSELL = environ['RUSSELL']
