@@ -38,7 +38,7 @@ def calendar(message):
 @bot.message_handler(commands=['iglinks'])
 def iglinks(message):
     if message.chat.id in GROUP_CHATS: return
-    bot.reply_to(message, 'Do check here!\https://t.me/nuspioneer/1351')
+    bot.reply_to(message, 'Do check here!\nhttps://t.me/nuspioneer/1351')
 
 @bot.message_handler(commands=['map'])
 def pgpmap(message):
