@@ -22,20 +22,18 @@ def say_hello(message):
         '',
         'Here are some commands that you can try:',
         '/start or /help to display this message again',
-        #'/calendar to obtain the latest activities in PH',
+        '/calendar to obtain the latest activities in PH',
         '/iglinks to get all the links to the interest groups',
         '/map for a nicely updated map of PGP',
         '/mahjong if you need a mahjong friend from the PCT chat so bad ;)',
         '/pinned to check all the important pinned messages on the PCT chat!'
     ]))
 
-'''
 @bot.message_handler(commands=['calendar'])
 def calendar(message):
     if message.chat.id in GROUP_CHATS: return
     bot.reply_to(message, 'Sending the PH calendar in a bit!')
-    bot.send_document(message.chat.id, open('assets/PH Calendar AY23-24.pdf', 'rb'))
-'''
+    bot.send_document(message.chat.id, open('assets/PH AY23-24 Calendar.pdf', 'rb'))
 
 @bot.message_handler(commands=['iglinks'])
 def iglinks(message):
